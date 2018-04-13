@@ -47,6 +47,7 @@ typedef struct Con Con;
 typedef struct Match Match;
 typedef struct Assignment Assignment;
 typedef struct Window i3Window;
+typedef struct margin_t margin_t;
 typedef struct gaps_t gaps_t;
 typedef struct mark_t mark_t;
 
@@ -139,9 +140,16 @@ typedef enum {
     POINTER_WARPING_NONE = 1
 } warping_t;
 
+struct margin_t {
+    int top;
+    int left;
+    int bottom;
+    int right;
+};
+
 struct gaps_t {
     int inner;
-    int outer;
+    margin_t outer;
 };
 
 /**

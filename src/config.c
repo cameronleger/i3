@@ -232,7 +232,7 @@ void load_configuration(xcb_connection_t *conn, const char *override_configpath,
     config.default_orientation = NO_ORIENTATION;
 
     config.gaps.inner = 0;
-    config.gaps.outer = 0;
+    config.gaps.outer = (margin_t) {0, 0, 0, 0};
 
     /* Set default urgency reset delay to 500ms */
     if (config.workspace_urgency_timer == 0)
